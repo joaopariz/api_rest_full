@@ -25,6 +25,8 @@ class ClientController extends Controller
             'zip_code' => 'required',
             'phone' => 'required',
         ]);
+
+        return Client::create($request->all());
     }
 
     public function show($id) // Bring data base info
